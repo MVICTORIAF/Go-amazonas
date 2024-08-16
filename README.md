@@ -1,4 +1,4 @@
-# Go-amazonas
+
 
 # Agencia de Viajes - Proyecto Django
 
@@ -68,3 +68,19 @@ python manage.py runserver
 
 
 Este README cubre todos los aspectos importantes de tu proyecto, incluyendo la instalación, configuración, estructura del proyecto y cómo contribuir. Puedes modificarlo según sea necesario para adaptarlo a los detalles específicos de tu proyecto.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

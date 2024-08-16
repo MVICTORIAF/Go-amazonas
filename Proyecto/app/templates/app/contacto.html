@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Contacto - Agencia de Viajes" />
+    <meta name="author" content="" />
+    <title>Contacto - Agencia de Viajes</title>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'app/assets/favicon.ico' %}" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+    <link href="{% static 'app/css/styles.css' %}" rel="stylesheet" />
+    <style>
+        .contact-section {
+            padding: 60px 0;
+            text-align: center; /* Centra todo el contenido de la sección */
+        }
+        .form-control {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .btn-custom {
+            background-color: #ffc107;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-custom:hover {
+            background-color: #e0a800;
+        }
+        .checkbox-custom {
+            margin-right: 10px;
+        }
+        .text-red {
+            color: #ff0000;
+            margin-top: 2cm; /* Baja el texto 2 cm desde la parte superior de la sección */
+            display: inline-block; /* Asegura que el texto sea tratado como un bloque para centrado vertical */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container px-5">
+            <a class="navbar-brand" href="{% url 'index' %}">Agencia de Viajes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'acerca_de' %}">ACERCA DE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'destinos' %}">DESTINOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">CONTACTO</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Login/Signup
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#login">Log In</a></li>
+                            <li><a class="dropdown-item" href="#signup">Sign Up</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="text-uppercase text-red">COTIZAR MI VIAJE</h2>
+                <p class="lead">Déjanos tus datos y nos comunicaremos contigo muy felizmente para darte toda la información</p>
+            </div>
+
+            <form>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                    <!-- Espacio adicional si es necesario -->
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Nombre*" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="País" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Apellido*" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="number" class="form-control" placeholder="Documento*" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Correo electrónico*" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Mes de viaje*" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Ciudad de origen*" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Cotizar con vuelos*" required>
+                    </div>
+                    <div class="col-md-12">
+                        <textarea class="form-control" rows="4" placeholder="Comentarios"></textarea>
+                    </div>
+                </div>
+                <div class="form-group form-check mt-3">
+                    <input type="checkbox" class="form-check-input checkbox-custom" id="dataPolicyCheck" required>
+                    <label class="form-check-label" for="dataPolicyCheck">Declaro que he leído y entendido la política de tratamiento de datos y he aceptado la misma <a href="#" class="text-success">ver política aquí</a></label>
+                </div>
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn-custom">QUIERO IR</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+      <!-- Footer personalizado -->
+      <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <!-- Sección de contacto -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Ponte en Contacto</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>Humberto Primo Nro 3569, Argentina, ARG<br>
+                        <i class="fas fa-phone"></i> +054 345 67890<br>
+                        <i class="fas fa-envelope"></i> travelAmazona@gmail.com
+                    </p>
+                </div>
+                <!-- Sección de enlaces -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'acerca_de' %}" class="text-white">Acerca De</a></li>
+                        <li><a href="{% url 'destinos' %}" class="text-white">Destinos</a></li>
+                        
+                        <li><a href="#" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <!-- Sección de galería de fotos -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>Galería de Fotos</h5>
+                    <div class="row g-2 footer-gallery">
+                        <div class="col-4">
+                            <div class="gallery-item">
+                                <img src="{% static 'app/assets/img/09.jpeg' %}" class="img-fluid" alt="Galería 1">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="gallery-item">
+                                <img src="{% static 'app/assets/img/11.jpg' %}" class="img-fluid" alt="Galería 2">
+                            </div>
+                        </div>
+                       
+                        
+                        
+                        <div class="col-4">
+                            <div class="gallery-item">
+                                <img src="{% static 'app/assets/img/41.jpg' %}" class="img-fluid" alt="Galería 6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Sección de noticias -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Noticias</h5>
+                    <p>La peligrosa batalla por salvar el Amazonas.</p>
+                    <a href="#" class="btn btn-success">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'app/js/scripts.js' %}"></script>
+</body>
+</html>
